@@ -82,13 +82,27 @@ h1 {
     line-height: 1;
 }
 
-button {
+.primary-button {
     padding-inline: 1.5rem;
     padding-block: .75rem;
     background-color: var(--clr-accent);
+    border: 1px solid var(--clr-accent);
     color: var(--clr-secondary-1);
     font-weight: var(--fw-bold);
-    border-style: none;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: transparent;
+    color: var(--clr-accent);
+}   
+
+.secondary-button {
+    text-underline-offset: 10px;
+}
+
+.secondary-button:hover {
+    color: var(--clr-accent);
 }
 
 .underline {
@@ -110,25 +124,12 @@ button {
     gap: 68px;
 }
 
-.header::after {
-    content: " ";
-    display: block;
-    height: 100px;
-    background-color: blue;
-    width: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
 .header__top-bar {
     display: flex;
     justify-content: space-between;
 }
 
-.header__top-bar a {
-    text-underline-offset: 10px;
-}
+
 
 .header__content {
     display: flex;
