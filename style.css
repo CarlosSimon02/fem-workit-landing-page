@@ -203,3 +203,36 @@ h1 {
     font-size: 1.75rem;
     line-height: 2.25rem;
 }
+
+.footer {
+    padding-inline: 1rem;
+    padding-block-start: 6.25rem;
+    color: var(--clr-secondary-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__author img {
+    width: 280px;
+    height: auto;
+}
+
+.footer__author__cta {
+    color:var(--clr-primary-1);
+    background-color: var(--clr-secondary-1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer * {
+    border: 1px solid red;
+}
