@@ -11,15 +11,19 @@
     --ff-primary: 'Manrope', sans-serif;
     --ff-secondary: 'Fraunces', serif;
 
-    --fs-heading-l: 5rem;
-    --fs-heading-m: 3.5rem;
-    --fs-heading-s: 2rem;
+    --fs-heading-h1: 3.125rem;
+    --fs-heading-h2: 2rem;
+    --fs-heading-h3: 2rem;
+    --fs-heading-h4: 1.25rem;
     --fs-body: 1.125rem;
-
-    --lh-heading-l: 5;
-    --lh-heading-m: 4;
-    --lh-heading-s: 2.5;
+ 
+    --lh-heading-h1: var(--fs-heading-h1);
+    --lh-heading-h2: calc(var(--fs-heading-h2) + .5rem);
+    --lh-heading-h3: calc(var(--fs-heading-h3) + .5rem);
+    --lh-heading-h4: --lh-heading-h3;
     --lh-body: 2;
+
+    --padding-inline-main: 1rem;
 }
 
 /* resets */
@@ -69,7 +73,8 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     text-align: center; 
-    line-height: 1.75rem;
+    line-height: var(--lh-body);
+    overflow-x: hidden;
 }
 
 h1,
@@ -80,13 +85,13 @@ h4 {
 }
 
 h1 {
-    font-size: 3.125rem;
-    line-height: 1;
+    font-size: var(--fs-heading-h1);
+    line-height: var(--lh-heading-h1);
 }
 
 h2 {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: var(--fs-heading-h2);
+    line-height: var(--lh-heading-h2);
 }
 
 .primary-button {
@@ -119,11 +124,6 @@ h2 {
     text-decoration-thickness: 3px;
     text-decoration-color: var(--clr-accent);
 }
-
-.curve-bg {
-    overflow-x: hidden;
-}
-
 .curve-bg::before {
     content: " ";
     width: 2200px;
@@ -133,27 +133,21 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-    /* overflow-y:hidden; */
 }
 
 /* header */
 .header {
     color: var(--clr-primary-1);
     padding-top: 2.25rem;
-    padding-inline: 1rem;
+    padding-inline: var(--padding-inline-main);
     display: grid;
     gap: 4rem;
     position: relative;
 }
 
 .header::before {
-    bottom: 5.3215rem;
+    bottom: 92px;
     background-color: var(--clr-secondary-1);
-}
-
-.header img {
-    max-width: 320px;
-    justify-self: center;
 }
 
 .header__top-bar {
@@ -168,12 +162,20 @@ h2 {
     gap: 2.5rem;
 }
 
+.header__image {
+    width: 320px;
+    justify-self: center;
+}
+
 .main {
     padding-inline: 1rem;
     padding-block: 4rem ;
     position: relative;
     z-index: -2;
     color: var(--clr-secondary-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main h3, .main h4 {
@@ -185,7 +187,12 @@ h2 {
     background-color: var(--clr-primary-2);
 }
 
+.main * {
+    border: 1px solid red;
+}
+
 .main__services {
+    max-width: 573px;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -238,6 +245,7 @@ h2 {
 }
 
 .footer__author__cta {
+    max-width: 514px;
     padding: 2rem;
     color:var(--clr-primary-1);
     background-color: var(--clr-secondary-1);
@@ -265,16 +273,34 @@ h2 {
     height: 20px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 375px) {
     :root {
-        --fs-heading-l: 5rem;
-        --fs-heading-m: 3.5rem;
-        --fs-heading-s: 2rem;
+        --fs-heading-h1: 3.125rem;
+        --fs-heading-h2: 2rem;
+        --fs-heading-h3: 2rem;
+        --fs-heading-h4: 1.25rem;
         --fs-body: 1.125rem;
-    
-        --lh-heading-l: 5;
-        --lh-heading-m: 4;
-        --lh-heading-s: 2.5;
-        --lh-body: 2;
+        
+        --fs-heading-h1: calc(3.125rem + (60 - 50) * ((100vw - 375px) / (768 - 375)));
+        --fs-heading-h2: calc(2rem + (48 - 32) * ((100vw - 375px) / (768 - 375)));
+        --fs-body: 1.125rem;
+    }
+
+    .curve-bg::before {
+        width: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
+        height: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
+    }
+
+    .header {
+        padding-top: 2.25rem;
+    }
+
+    .header::before {
+        bottom: calc(92px + (148 - 92) * ((100vw - 375px) / (768 - 375)));
+    }
+
+    .header__image {
+        width: calc(320px + (514 - 320) * ((100vw - 375px) / (768 - 375)));
+        justify-self: center;
     }
 }
