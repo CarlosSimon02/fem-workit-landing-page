@@ -168,7 +168,7 @@ h2 {
 }
 
 .main {
-    padding-inline: 1rem;
+    padding-inline: var(--padding-inline-main);
     padding-block: 4rem ;
     position: relative;
     z-index: -2;
@@ -222,7 +222,7 @@ h2 {
 }
 
 .footer {
-    padding-inline: 1rem;
+    padding-inline: var(--padding-inline-main);
     padding-block-start: 6.25rem;
     padding-block-end: 4rem;
     color: var(--clr-secondary-2);
@@ -241,7 +241,7 @@ h2 {
 .footer__author img {
     width: 280px;
     height: auto;
-    margin-bottom: -3.25rem;
+    margin-bottom: -52px;
 }
 
 .footer__author__cta {
@@ -275,24 +275,15 @@ h2 {
 
 @media screen and (min-width: 375px) {
     :root {
-        --fs-heading-h1: 3.125rem;
-        --fs-heading-h2: 2rem;
-        --fs-heading-h3: 2rem;
-        --fs-heading-h4: 1.25rem;
-        --fs-body: 1.125rem;
-        
         --fs-heading-h1: calc(3.125rem + (60 - 50) * ((100vw - 375px) / (768 - 375)));
         --fs-heading-h2: calc(2rem + (48 - 32) * ((100vw - 375px) / (768 - 375)));
-        --fs-body: 1.125rem;
+
+        --padding-inline-main: calc(1rem + (39 + 16) * ((100vw - 375px) / (768 - 375)));
     }
 
     .curve-bg::before {
         width: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
         height: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
-    }
-
-    .header {
-        padding-top: 2.25rem;
     }
 
     .header::before {
@@ -302,5 +293,19 @@ h2 {
     .header__image {
         width: calc(320px + (514 - 320) * ((100vw - 375px) / (768 - 375)));
         justify-self: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__author {
+        align-items: start;
+    }
+    
+    .footer__author img {
+        margin-bottom: -130px;
+    }
+    
+    .footer__author__cta {
+        margin-left: 175px;
     }
 }
