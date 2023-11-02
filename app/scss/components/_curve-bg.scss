@@ -1,0 +1,20 @@
+.curve-bg::before {
+    content: " ";
+    width: 2200px;
+    height: 2200px;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.header::before {
+    bottom: 92px;
+    background-color: var(--clr-secondary-1);
+}
+
+.main::before {
+    bottom: 0;
+    background-color: var(--clr-primary-2);
+}

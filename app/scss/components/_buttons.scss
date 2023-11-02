@@ -1,0 +1,23 @@
+
+.primary-button {
+    padding-inline: 1.5rem;
+    padding-block: .75rem;
+    background-color: var(--clr-accent);
+    border: 1px solid var(--clr-accent);
+    color: var(--clr-secondary-1);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: transparent;
+    color: var(--clr-accent);
+}   
+
+.secondary-button {
+    text-underline-offset: 10px;
+}
+
+.secondary-button:hover {
+    color: var(--clr-accent);
+}
