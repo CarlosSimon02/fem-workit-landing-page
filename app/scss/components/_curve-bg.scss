@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .curve-bg::before {
     content: " ";
     width: 2200px;
@@ -17,4 +21,32 @@
 .main::before {
     bottom: 0;
     background-color: var(--clr-primary-2);
+}
+
+@media only screen and (min-width: 375px) {
+    .curve-bg::before {
+        width: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
+        height: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
+    }
+
+    .header::before {
+        bottom: calc(92px + (148 - 92) * ((100vw - 375px) / (768 - 375)));
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .curve-bg::before {
+        width: calc(4500px + (8310 - 4500) * ((100vw - 768px) / (1440 - 768)));
+        height: calc(4500px + (8310 - 4500) * ((100vw - 768px) / (1440 - 768)));
+    }
+
+    .header::before {
+        bottom: calc(92px + (148 - 92) * ((100vw - 768px) / (1440 - 768)));
+    }
+}
+
+@media only screen and (min-width: 1439px) {
+    .header::before {
+        bottom: calc(92px + (148 - 92) * ((100vw - 768px) / (1440 - 768)));
+    }
 }

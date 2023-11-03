@@ -5,21 +5,24 @@
     display: grid;
     gap: 4rem;
     position: relative;
+
+    &__top-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        gap: 2.5rem;
+    }
+    
+    &__image {
+        width: 320px;
+        justify-self: center;
+    }
 }
 
-.header__top-bar {
-    display: flex;
-    justify-content: space-between;
-}
 
-.header__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-    gap: 2.5rem;
-}
 
-.header__image {
-    width: 320px;
-    justify-self: center;
-}

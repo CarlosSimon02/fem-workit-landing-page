@@ -2,19 +2,7 @@
 
 @media only screen and (min-width: 375px) {
     :root {
-        --fs-heading-h1: calc(3.125rem + (60 - 50) * ((100vw - 375px) / (768 - 375)));
-        --fs-heading-h2: calc(2rem + (48 - 32) * ((100vw - 375px) / (768 - 375)));
-
         --padding-inline-main: calc(1rem + (39 + 16) * ((100vw - 375px) / (768 - 375)));
-    }
-
-    .curve-bg::before {
-        width: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
-        height: calc(2200px + (4500 - 2200) * ((100vw - 375px) / (768 - 375)));
-    }
-
-    .header::before {
-        bottom: calc(92px + (148 - 92) * ((100vw - 375px) / (768 - 375)));
     }
 
     .header__image {
@@ -32,24 +20,9 @@
 
 @media only screen and (min-width: 768px) {
     :root {
-        --fs-heading-h1: calc(3.75rem + (80 - 60) * ((100vw - 768px) / (1440 - 768)));
-        --fs-heading-h2: calc(3rem + (56 - 48) * ((100vw - 768px) / (1440 - 768)));
-        --fs-heading-h3: calc(1.75rem + (32 - 28) * ((100vw - 768px) / (1440 - 768)));
-        --fs-heading-h4: calc(1.25rem + (24 - 20) * ((100vw - 768px) / (1440 - 768)));
-        --fs-body: 1.125rem;
- 
         --padding-inline-main: calc(2.4375rem + (165 + 39) * ((100vw - 768px) / (1440 - 768)));
     }
-
-    .curve-bg::before {
-        width: calc(4500px + (8310 - 4500) * ((100vw - 768px) / (1440 - 768)));
-        height: calc(4500px + (8310 - 4500) * ((100vw - 768px) / (1440 - 768)));
-    }
-
-    .header::before {
-        bottom: calc(92px + (148 - 92) * ((100vw - 768px) / (1440 - 768)));
-    }
-
+ 
     .header__image {
         width: calc(514px + (767 - 514) * ((100vw - 768px) / (1440 - 768)));
     }
@@ -107,16 +80,7 @@
 
 @media only screen and (min-width: 1439px) {
     :root {
-        --fs-heading-h1: 5rem;
-        --fs-heading-h2: 3.5rem;
-        --fs-heading-h3: 2rem;
-        --fs-heading-h4: 1.5rem;
- 
         --padding-inline-main: 165px;
-    }
-
-    .header::before {
-        bottom: calc(92px + (148 - 92) * ((100vw - 768px) / (1440 - 768)));
     }
 
     .header__image {
