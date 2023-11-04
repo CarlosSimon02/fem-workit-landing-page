@@ -52,11 +52,6 @@ h2 {
 }
 
 h3 {
-    font-size: 1.75rem;
-    line-height: 1.25;
-}
-
-h4 {
     font-size: 1.25rem;
     line-height: 1.25;
     aspect-ratio: 1 / 1;
@@ -66,6 +61,11 @@ h4 {
     align-items: center;
     justify-content: center;
     border-radius: 100%;
+}
+
+h4 {
+    font-size: 1.75rem;
+    line-height: 1.25;
 }
 
 .underline {
