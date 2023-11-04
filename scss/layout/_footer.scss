@@ -1,0 +1,66 @@
+@use '../scss-utils/' as u;
+
+.grid__footer {
+    padding-block-start: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 74px;
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include u.breakpoint(tablet) {
+            align-items: start;
+        }
+
+        & img {
+            width: 281px;
+
+            @include u.breakpoint(tablet) {
+                width: clamp(281px, 29.167vw + 57px, 477px);
+            }
+        }
+
+        &__content {
+            padding: 31px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            text-align: center;
+            color: var(--clr-primary-1);
+            background-color: var(--clr-secondary-1);
+            margin-top: -53px;
+
+            @include u.breakpoint(tablet) {
+                max-width: clamp(514px, 32.143vw + 266px, 730px);
+                gap: 24px;
+                padding: 56px;
+                margin-top: calc(clamp(130px, 25.893vw + -69px, 304px) * -1);
+                margin-left: clamp(175px, 30.804vw + -62px, 382px);
+                text-align: left;
+                align-items: start;
+            }
+
+            @include u.breakpoint(desktop) {
+                gap: 32px;
+                padding: 64px;
+            }
+        }
+    }
+
+    &__bottom-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 57px;
+
+        &__socials {
+            display: flex;
+            gap: 28px;
+        }
+    }
+}

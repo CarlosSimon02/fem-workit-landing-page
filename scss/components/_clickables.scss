@@ -1,3 +1,9 @@
+button {
+    border-style: none;
+    background-color: transparent;
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
 
 .primary-button {
     padding-inline: 1.5rem;
@@ -15,9 +21,14 @@
 }   
 
 .secondary-button {
+    color: var(--clr-primary-1);
     text-underline-offset: 10px;
 }
 
 .secondary-button:hover {
     color: var(--clr-accent);
+}
+
+svg:hover path {
+    fill: var(--clr-secondary-1);
 }

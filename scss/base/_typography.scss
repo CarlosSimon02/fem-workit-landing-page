@@ -1,0 +1,82 @@
+@use '../scss-utils/' as u;
+
+@font-face {
+    font-family: 'Manrope';
+    src: url("/assets/fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url("/assets/fonts/Manrope-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Fraunces-144';
+    src: url("/assets/fonts/Fraunces_144pt-SemiBold.ttf");
+}
+
+body {
+    font-family: var(--ff-primary);
+    line-height: 1.75;
+
+    @include u.breakpoint(tablet) {
+        font-size: clamp(1rem, 0.298vw + 0.857rem, 1.125rem);
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-semi-bold);
+}
+
+h1 {
+    font-size: clamp(3.125rem, 2.545vw + 2.529rem, 3.75rem);
+    line-height: 1;
+
+    @include u.breakpoint(tablet) {
+        font-size: clamp(3.75rem, 2.976vw + 2.321rem, 5rem);
+    }
+}
+
+h2 {
+    font-size: clamp(2rem, 4.071vw + 1.046rem, 3rem);
+    line-height: 1.15;
+
+    @include u.breakpoint(tablet) {
+        font-size: clamp(3rem, 1.19vw + 2.429rem, 3.5rem);
+    }
+}
+
+h3 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    aspect-ratio: 1 / 1;
+    padding-inline: 1rem;
+    border: 1px solid var(--clr-secondary-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.underline {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--clr-accent);
+}
+
+ol {
+    padding: 0;
+    list-style: none;
+}

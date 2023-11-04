@@ -1,0 +1,14 @@
+@use '../scss-utils/' as u;
+
+.grid {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 5.852vw + -6px, 39px);
+    padding-block-start: 36px;
+    padding-block-end: 64px;
+
+    @include u.breakpoint(tablet) {
+        padding-block-start: clamp(36px, 3.274vw + 10.864px, 58px);
+        padding-inline: clamp(39px, 18.75vw + -105px, 165px);
+    }
+}

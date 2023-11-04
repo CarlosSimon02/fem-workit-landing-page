@@ -1,0 +1,64 @@
+@use '../scss-utils/' as u;
+
+.grid__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 64px;
+    padding-block-end: clamp(72px, 8.142vw + 42px, 104px);
+    color: var(--clr-secondary-2);
+
+    @include u.breakpoint(tablet) {
+        padding-block-start: clamp(64px, 3.869vw + 35px, 90px);
+        padding-block-end: clamp(104px, 9.97vw + 28px, 171px);
+    }
+
+    &__services {
+        max-width: 35.8125rem;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media (min-width: 1200px) {
+            max-width: none;
+            flex-direction: row;
+        }
+
+        &__item {
+            display: grid;
+            grid-template-areas: 'number' 'header' 'content';
+            justify-items: center;
+            text-align: center;
+            gap: 24px;
+            justify-content: start;
+
+            @include u.breakpoint(tablet) {
+                grid-template-areas: 'number header' 'number content';
+                align-items: center;
+                text-align: left;
+                justify-items: start;
+            }
+
+            @media(min-width: 1200px) {
+                grid-template-areas: 'number' 'header' 'content';
+                align-items: center;
+                text-align: center;
+                justify-items: center;
+                align-content: start;
+                gap: 28px;
+            }
+            
+            & h3, & h4 {
+                color: var(--clr-secondary-1);
+            }
+
+            & h4 {
+                grid-area: number;
+
+                @media(min-width: 1200px) {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../scss-utils/' as u;
+
+.grid__header {
+    color: var(--clr-primary-1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    &__top-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+
+        & h1 {
+            max-width: 25rem;
+
+            @include u.breakpoint(tablet) {
+                max-width: clamp(25rem, 29.762vw + 10.714rem, 37.5rem);
+            }
+        }
+    }
+
+    &__image {
+        align-self: center;
+        max-width: clamp(320px, 49.364vw + 134.88px, 514px);
+
+        @include u.breakpoint(tablet) {
+            max-width: clamp(514px, 37.649vw + 225px, 767px);
+        }
+    }
+}

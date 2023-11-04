@@ -1,0 +1,37 @@
+@use '../scss-utils/' as u;
+
+.grid__header {
+    position: relative;
+}
+
+.grid__footer__cta__content {
+    position: relative;
+}
+
+.pattern-1,
+.pattern-2,
+.pattern-3 {
+    position: absolute;
+    visibility: hidden;
+
+    @include u.breakpoint(tablet) {
+        visibility: visible;
+    }
+}
+
+.pattern-1 {
+    top: clamp(35px, 3.571vw + 8px, 59px);
+    left: calc(clamp(266px, 5.655vw + 222px, 304px) * -1);
+}
+
+.pattern-2 {
+    top: clamp(218px, 4.464vw + 15.712px, 258px);
+    right: calc(clamp(134px, 11.756vw + 43.712px, 213px) * -1);
+}
+
+.pattern-3 {
+    bottom: calc(clamp(48px, -8.631vw + 172px, 106px) * -1);
+    right: clamp(0px, 10.714vw + -82px, 72px);
+    max-width: 220px;
+    margin-top: inherit;
+}
