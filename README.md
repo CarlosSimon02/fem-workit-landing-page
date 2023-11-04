@@ -25,7 +25,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/CarlosSimon02/fem-workit-landing-page](https://github.com/CarlosSimon02/fem-workit-landing-page)
-- Live Site URL: [https://fem-workit-landing-page-carlossimon.vercel.app/]([https://your-live-site-url.com](https://fem-workit-landing-page-carlossimon.vercel.app/))
+- Live Site URL: [https://fem-workit-landing-page-carlossimon.vercel.app/](https://fem-workit-landing-page-carlossimon.vercel.app/)
 
 ## Acknowledgments
 
