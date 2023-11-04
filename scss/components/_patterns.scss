@@ -4,6 +4,19 @@
     position: relative;
 }
 
+.background {
+    position: absolute;
+    max-width: 1800px;
+    width: 100vw;
+    height: 1000px;
+    top: 0;
+    // background-color: red;
+    left: 50%;
+    transform: translate(-50%,0);
+    overflow-x: hidden;
+    z-index: 0;
+}
+
 .grid__footer__cta__content {
     position: relative;
 }
@@ -21,12 +34,20 @@
 
 .pattern-1 {
     top: clamp(35px, 3.571vw + 8px, 59px);
-    left: calc(clamp(266px, 5.655vw + 222px, 304px) * -1);
+    left: calc(clamp(139px, -13.244vw + 330px, 228px) * -1);
+
+    @include u.breakpoint(desktop) {
+        left: clamp(-139px, 38.611vw + -695px, 0px);
+    }
 }
 
 .pattern-2 {
     top: clamp(218px, 4.464vw + 15.712px, 258px);
-    right: calc(clamp(134px, 11.756vw + 43.712px, 213px) * -1);
+    right: calc(clamp(48px, -6.845vw + 146px, 94px) * -1);
+
+    @include u.breakpoint(desktop) {
+        right: clamp(-48rem, 56.667vw + -54rem, 9.75rem);
+    }
 }
 
 .pattern-3 {
